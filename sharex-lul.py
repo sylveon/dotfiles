@@ -1,8 +1,10 @@
 import boto3 as aws
+import os
 import pyperclip as xclip
 import pyscreenshot as scrot
 import random
 import string
+import sys
 
 from io import BytesIO
 from pathlib import Path
@@ -16,7 +18,15 @@ def main():
     file_name = random_generator() + '.png'
     file_path = Path.home() / 'screenshots' / file_name
     
-    scrot.grab().save(file_path.open('xb'))
+    if sys.argv[1] == 'full' or len(sys.argv) == 1:
+        scrot.grab().save(file_path.open('xb'))
+    elif sys.argv[1] == 'region':
+        os.system(f'scrot "{file_path}" -s')
+    elif sys.argv[1] == 'active':
+        os.system(f'scrot "{file_path}" -ub')
+    else:
+        raise ValueError('No valid mode passed')
+
     s3.upload_file(str(file_path), 'files.charlesmilette.net', file_name)
     
     xclip.copy('https://charles.getsharex.com/' + file_name)
