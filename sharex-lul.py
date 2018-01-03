@@ -18,7 +18,7 @@ def main():
     file_name = random_generator() + '.png'
     file_path = Path.home() / 'screenshots' / file_name
     
-    if sys.argv[1] == 'full' or len(sys.argv) == 1:
+    if len(sys.argv) == 1 or sys.argv[1] == 'full':
         scrot.grab().save(file_path.open('xb'))
     elif sys.argv[1] == 'region':
         os.system(f'scrot "{file_path}" -s')
