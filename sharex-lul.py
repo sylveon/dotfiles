@@ -28,7 +28,10 @@ def main():
     else:
         raise ValueError('No valid mode passed')
 
-    s3.upload_file(str(file_path), 'files.charlesmilette.net', file_name)
+    s3.upload_file(
+        str(file_path), 'files.charlesmilette.net', file_name,
+        ExtraArgs={'ContentType': 'image/png'}
+    )
     
     xclip.copy('https://charles.getsharex.com/' + file_name)
     if which('pacat') is not None:
