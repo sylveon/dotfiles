@@ -1,0 +1,11 @@
+{
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.minimap.renderCharacters": false,
+    "problems.decorations.enabled": true,
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "terminal.integrated.fontFamily": "FuraCode Nerd Font",
+    "terminal.integrated.rightClickCopyPaste": true,
+    "window.zoomLevel": -0.5
+}
