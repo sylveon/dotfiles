@@ -1,6 +1,6 @@
 if test $TERMINOLOGY -eq 1 ^ /dev/null
     set -g theme_nerd_fonts yes
-    set -g theme_color_scheme gruvbox
+    set -g theme_color_scheme zenburn
 else
     set -g theme_color_scheme terminal2-light-black
 end
