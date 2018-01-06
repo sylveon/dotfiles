@@ -21,7 +21,7 @@ def main():
     if len(sys.argv) == 1 or sys.argv[1] == 'full':
         os.system(f'maim -m 10 "{file_path}"')
     elif sys.argv[1] == 'region':
-        os.system(f'maim -m 10 -s | convert - \( +clone -background black -shadow 80x3+0+0 \) +swap -background none -layers merge +repage "{file_path}"')
+        os.system(f'maim -m 10 -s "{file_path}"')
     elif sys.argv[1] == 'active':
         os.system(f'maim -m 10 -i $(xdotool getactivewindow) "{file_path}"')
     else:
