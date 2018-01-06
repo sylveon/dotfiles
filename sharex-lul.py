@@ -1,7 +1,6 @@
 import boto3 as aws
 import os
 import pyperclip as xclip
-import pyscreenshot as scrot
 import random
 import string
 import sys
@@ -20,11 +19,11 @@ def main():
     file_path = Path.home() / 'screenshots' / file_name
     
     if len(sys.argv) == 1 or sys.argv[1] == 'full':
-        scrot.grab().save(file_path.open('xb'))
+        os.system(f'maim "{file_path}"')
     elif sys.argv[1] == 'region':
-        os.system(f'scrot "{file_path}" -s')
+        os.system(f'maim -s | convert - \( +clone -background black -shadow 80x3+5+5 \) +swap -background none -layers merge +repage "{file_path}"')
     elif sys.argv[1] == 'active':
-        os.system(f'scrot "{file_path}" -ub')
+        os.system(f'maim -i $(xdotool getactivewindow) "{file_path}"')
     else:
         raise ValueError('No valid mode passed')
 
