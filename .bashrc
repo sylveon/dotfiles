@@ -30,5 +30,5 @@ export HASTE_SERVER=https://haste.charlesmilette.net							# Custom server for h
 export PROMPT_DIRTRIM=4											# Trim directory in prompt if too long
 shopt -s cdspell											# Fix those fucking typos
 shopt -s dirspell											# ^
-eval "$(thefuck --alias)"										# FUCK
+eval "$(SHELL=bash thefuck --alias)"									# FUCK
 eval "$(hub alias -s)"											# Hub as git
