@@ -30,5 +30,18 @@ export HASTE_SERVER=https://haste.charlesmilette.net							# Custom server for h
 export PROMPT_DIRTRIM=4											# Trim directory in prompt if too long
 shopt -s cdspell											# Fix those fucking typos
 shopt -s dirspell											# ^
-eval "$(SHELL=bash thefuck --alias)"									# FUCK
 eval "$(hub alias -s)"											# Hub as git
+
+function fuck () {											# FUCK
+    TF_PYTHONIOENCODING=$PYTHONIOENCODING;
+    export TF_ALIAS=fuck;
+    export TF_SHELL_ALIASES=$(alias);
+    export TF_HISTORY=$(fc -ln -10);
+    export PYTHONIOENCODING=utf-8;
+    TF_CMD=$(
+        thefuck THEFUCK_ARGUMENT_PLACEHOLDER $@
+    ) && eval $TF_CMD;
+    unset TF_HISTORY;
+    export PYTHONIOENCODING=$TF_PYTHONIOENCODING;
+    history -s $TF_CMD;
+}
