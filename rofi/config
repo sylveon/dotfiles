@@ -1,1 +1,3 @@
+rofi.modi: window,run,drun
+rofi.pid: ~/.config/rofi/pid
 rofi.theme: ~/git/dotfiles/rofi/sidebar.rasi
