@@ -76,7 +76,7 @@
 }
 #mainbox {
     expand: false;
-    background-color: #1c1c1cee;
+    background-color: rgba(0,0,0,0.7);
     spacing: 1em;
 }
 #listview {
