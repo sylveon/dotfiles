@@ -1,6 +1,4 @@
-# !/bin/bash
-# /usr/bin/ob_blurlock
-# blurlock for oblogout-manjaro
+#!/bin/bash
 
 if [ -e /tmp/screenshot.png ]; then
   rectangles=" "

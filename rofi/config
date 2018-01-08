@@ -1,2 +1,3 @@
+rofi.kb-cancel: Super_L,Escape
 rofi.modi: window,run,drun
 rofi.theme: ~/git/dotfiles/rofi/sidebar.rasi
