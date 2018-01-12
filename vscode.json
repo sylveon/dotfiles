@@ -6,6 +6,10 @@
     "problems.decorations.enabled": true,
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
+    "terminal.integrated.env.linux":
+    {
+        "TERMINOLOGY": "1"
+    },
     "terminal.integrated.fontFamily": "FuraCode Nerd Font",
     "terminal.integrated.rightClickCopyPaste": true,
     "window.zoomLevel": -0.5,
