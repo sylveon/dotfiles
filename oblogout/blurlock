@@ -12,14 +12,14 @@ done
 maim | convert - -fill black -colorize 40% -blur 0x5 -draw "fill black fill-opacity 0.4 $rectangles" /tmp/screenshotblur.png
 
 i3lock \
-        -t -n -i "/tmp/screenshotblur.png" \
-        --timepos="x-90:h-ch+30" \
-        --datepos="tx+24:ty+25" \
+        -m -t -n -i "/tmp/screenshotblur.png" \
+        --timepos="x+110:h-70" \
+        --datepos="x+135:h-45" \
         --clock --datestr "Type password to unlock..." \
         --insidecolor=00000000 --ringcolor=ffffffff --line-uses-inside \
         --keyhlcolor=d23c3dff --bshlcolor=d23c3dff --separatorcolor=00000000 \
         --insidevercolor=00000000 --insidewrongcolor=d23c3dff \
         --ringvercolor=ffffffff --ringwrongcolor=ffffffff --indpos="x+280:h-70" \
         --radius=20 --ring-width=4 --veriftext="" --wrongtext="" \
-        --textcolor="ffffffff" --timecolor="ffffffff" --datecolor="ffffffff" \
+        --verifcolor="ffffffff" --timecolor="ffffffff" --datecolor="ffffffff" \
         --force-clock

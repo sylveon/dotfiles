@@ -1,4 +1,9 @@
 {
+    "discord.clientID": "408997051070676993",
+    "discord.lowerDetailsDebugging": "Debugging {workspace}",
+    "discord.lowerDetailsEditing": "Working on {workspace}",
+    "discord.lowerDetailsNotFound": "Working on nothing",
+    "discord.silent": true,
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
     "editor.minimap.maxColumn": 60,
@@ -11,7 +16,7 @@
         "TERMINOLOGY": "1"
     },
     "terminal.integrated.fontFamily": "FuraCode Nerd Font",
-    "terminal.integrated.rightClickCopyPaste": true,
+    "terminal.integrated.rightClickBehavior": "copyPaste",
     "window.zoomLevel": -0.5,
     "workbench.colorTheme": "Railgun"
 }
