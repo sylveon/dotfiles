@@ -16,7 +16,8 @@
     {
         "TERMINOLOGY": "1"
     },
-    "terminal.integrated.fontFamily": "FuraCode Nerd Font",
+    "terminal.integrated.fontFamily": "UbuntuMono Nerd Font",
+    "terminal.integrated.fontSize": 16,
     "terminal.integrated.rightClickBehavior": "copyPaste",
     "window.zoomLevel": -0.5,
     "workbench.colorTheme": "Railgun"
