@@ -9,7 +9,6 @@
     "editor.fontLigatures": true,
     "editor.minimap.maxColumn": 60,
     "editor.minimap.renderCharacters": false,
-    "problems.decorations.enabled": true,
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "terminal.integrated.env.linux":
@@ -19,6 +18,7 @@
     "terminal.integrated.fontFamily": "UbuntuMono Nerd Font",
     "terminal.integrated.fontSize": 16,
     "terminal.integrated.rightClickBehavior": "copyPaste",
+    "window.titleBarStyle": "custom",
     "window.zoomLevel": -0.5,
     "workbench.colorTheme": "Railgun"
 }

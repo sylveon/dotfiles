@@ -1,11 +1,11 @@
+#!/bin/python3
 import boto3 as aws
-import os
 import pyperclip as xclip
 import random
 import string
+import subprocess
 import sys
 
-from io import BytesIO
 from pathlib import Path
 from shutil import which
 
@@ -19,11 +19,11 @@ def main():
     file_path = Path.home() / 'screenshots' / file_name
     
     if len(sys.argv) == 1 or sys.argv[1] == 'full':
-        os.system(f'maim -m 10 "{file_path}"')
+        subprocess.check_call(['deepin-screenshot', '-f', '-s', file_path])
     elif sys.argv[1] == 'region':
-        os.system(f'maim -m 10 -s "{file_path}"')
+        subprocess.check_call(['deepin-screenshot', '-s', file_path])
     elif sys.argv[1] == 'active':
-        os.system(f'maim -m 10 -i $(xdotool getactivewindow) "{file_path}"')
+        subprocess.check_call(['deepin-screenshot', '-w', '-s', file_path])
     else:
         raise ValueError('No valid mode passed')
 
@@ -32,9 +32,9 @@ def main():
         ExtraArgs={'ContentType': 'image/png'}
     )
     
-    xclip.copy('https://charles.getsharex.com/' + file_name)
+    xclip.copy('https://yiff.forsale/' + file_name)
     if which('pacat') is not None:
-        sound = Path(__file__).parents[0] / 'assets' / 'capture-success.wav'
-        os.system(f'pacat "{sound}"')
+        sound = Path(__file__).parent / 'assets' / 'capture-success.wav'
+        subprocess.check_call(['pacat', str(sound)])
 
 if __name__ == '__main__': main()
